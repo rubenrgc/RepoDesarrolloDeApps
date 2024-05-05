@@ -1,0 +1,84 @@
+<html lang="en">
+
+<link rel="stylesheet" href="./style/registro.css" type="text/css" /> 
+
+    <Header>
+
+       
+    <div class="barra-menu">
+        
+        <nav class="menu">
+            <ul>
+                <li><a href="contacto.html">Contact</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+        
+    </Header>
+<main class="container">
+    
+
+
+<div class="form">
+    <h2>Registra un alumno nuevo:</h2>
+    <form action="/action_page.php"></form>
+    <div>
+        <label >Nombre:</label>
+        <input type="text" id="txtNombre">
+    </div>
+    <div>
+        <label >Edad:</label>
+        <input type="number" id="txtEdad">
+    </div>
+    <div>
+        <label >Genero:</label>
+        <input type="text" id="txtGender">
+    </div>
+    <div>
+        <label >Email:</label>
+        <input type="email" id="txtEmail">
+    </div>
+    <div>
+        <label >Password:</label>
+        <input type="password" id="txtPassword">
+    </div>
+    <h2>Registra sus calificaciones:</h2>
+    <div>
+        <label>Materia 1:</label>
+        <input type="text" id="txtMateria1">
+    </div>
+    <div>
+        <label >Materia 2:</label>
+        <input type="text" id="txtMateria2">
+    </div>
+    <div>
+        <label>Materia 3:</label>
+        <input type="text" id="txtMateria3">
+    </div>
+ 
+    <h2>Selecciona la facultad donde estudia:</h2>
+    <select name="Facultades" id="txtFacultad">
+        <option value="">--Please choose an option--</option>
+        <option value="ciencias administrativas">Ciencias Administrativas</option>
+        <option value="ingenieria">Ingenieria</option>
+        <option value="ciencias politicas">Ciencias Politicas</option>
+    
+    </select>
+    <h2>Da clic  en "Registrar" para enviar los registros en el formulario:</h2>
+
+    <button class="button1" onclick="registrar()" type="submit" value="Registrar">Registrar</button>
+
+   
+
+
+</div>
+
+</main>
+
+<script src="./scripts/register.js"></script>
+<script src="./scripts/display.js"></script>
+
+</body>
+</html>
