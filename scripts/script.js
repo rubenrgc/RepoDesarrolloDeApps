@@ -14,13 +14,32 @@ console.log(student1,student2);
 
 //object constructor
 
-function Student(name,agemisStudent){
+function Student(name,age,isStudent){
 
     this.name=name;
     this.age=age;
     this.isStudent=isStudent;
 
 }
+students.push("Fernanda","Adrian");
+students[2]= "fabi";
+
+
+students.pop();// quita items del arreglo
+students.splice(1,1);//quita item especifivco
+console.log(students);
+
+
+let student1 = {
+name:"samantha",
+age:99,
+isStudent:false
+
+
+}
+
+
+
 
 
 let student3 = new Student("Fabiola",97,false);

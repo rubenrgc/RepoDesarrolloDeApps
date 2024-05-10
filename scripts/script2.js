@@ -1,5 +1,12 @@
 //Loops
 
+
+
+
+// no se va a utilizar 
+
+
+
 let numbers = [3,45,32,67,12,10];
 console.table(numbers[0])
 console.table(numbers[1])

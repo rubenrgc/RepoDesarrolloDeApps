@@ -1,7 +1,13 @@
-function saveItems (item){
-console.log(item);
-let val = JSON.stringify(item);
-console.log(val);
-localStorage.setItem("facultades",val);
 
-}
+
+
+
+
+
+
+
+//va quedadndo hasta aqui
+
+
+   
+   //pasar objeto a lista desplegable

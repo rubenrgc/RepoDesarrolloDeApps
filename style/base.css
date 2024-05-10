@@ -74,8 +74,11 @@ button{
   box-shadow: 3px 3px .5px 1px rgb(173, 173, 173);
 
 }
-/* Nav Barr*/ 
-ul {
+
+
+
+ /* Nav Barr*/ 
+ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -88,8 +91,9 @@ li {
 }
 
 li a {
+  font-size: x-large;
   display: block;
-  color: white;
+  color: rgb(95, 93, 93);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -99,5 +103,4 @@ li a {
 li a:hover {
   background-color: #111;
 }
-
 

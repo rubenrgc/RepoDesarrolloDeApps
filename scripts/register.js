@@ -1,3 +1,6 @@
+
+
+
 let students = [];
 
 // constructor
@@ -24,31 +27,31 @@ function Student(
 }
 
 //validacion
+
+
 function isValid(unAlumno) {
   let validacion = true;
 
   if (unAlumno.name == "") {
+    validacion = false;
   }
 
   if (unAlumno.age == "") {
+    validacion = false;
   }
   if (unAlumno.gender == "") {
+    validacion = false;
   }
   if (unAlumno.password == "") {
+    validacion = false;
   }
-  if (unAlumno.materia1 == "") {
-  }
-  if (unAlumno.materia2 == "") {
-  }
-  if (unAlumno.materia3 == "") {
-  }
-  if (unAlumno.facultad == "") {
-  }
+  
 
   return validacion;
 }
 //registrar
 
+// agarra los valores de lols campos y los guarda en variables
 function registrar() {
   let inputNombre = document.getElementById("txtNombre").value;
   let inputEdad = document.getElementById("txtEdad").value;
@@ -58,15 +61,8 @@ function registrar() {
   let inputMateria1 = document.getElementById("txtMateria1").value;
   let inputMateria2 = document.getElementById("txtMateria2").value;
   let inputMateria3 = document.getElementById("txtMateria3").value;
-  let inpuFacultad = document.getElementById("txtFacultad").value;
-  if (isValid(nuevoAlumno) == true) {
-    students.push(nuevoAlumno);
-    console.log(students);
-  }else{
-alert("Por favor completa los campos");
-
-
-  }
+  let inpuFacultad = document.getElementById("facultad").value;
+    
  
 
   let nuevoAlumno = new Student(
@@ -80,13 +76,89 @@ alert("Por favor completa los campos");
     inputMateria3,
     inpuFacultad
   );
+
+
+ 
+  
+
+if (isValid(nuevoAlumno) == true) {
   students.push(nuevoAlumno);
   console.log(students);
+  displayCards();
+   
+
+ 
+
+} else {
+  alert("Por favor completa los campos");
 }
+
+
+
+
+
+
+
+//form.reset();
+}
+
+
+
+
+
+
+
 
 function init() {
+
   let student1 = new Student("Samuel",99,"Hombre","samurl@hotmail.com",1234567,"Matematicas","Historia","Quimica","Cuencias Sociales");
   students.push(student1);
-}
+  
 
-window.onload = init; //espera renderizar el html
+ var fac  =  JSON.parse(localStorage.getItem("facultades"));
+    var select = document.getElementById("facultad");
+
+    console.log(document.getElementById("facultad"));
+    console.log(select );
+  //select.innerHTML = ""; // Limpiar las opciones actuales
+
+
+    for (var key in fac) { // repite para recorrer los elementos del objeto
+      console.log(key);
+      if (fac.hasOwnProperty(key)) {
+        var facultadOption = document.createElement("option");
+        console.log(facultadOption);
+
+        debugger
+        facultadOption.value = key;
+
+        console.log(key);
+        facultadOption.innerHTML = fac.namefacultad + "-" + fac.namecampus;
+        console.log(facultadOption);
+        select.appendChild(facultadOption);
+        console.log(select);
+
+      //QUEDARSE EN EL MENU DEL OPTION
+
+
+      }
+    }
+
+
+
+
+  displayCards();
+
+  
+}
+// //espera renderizar el html
+
+
+
+
+
+
+
+
+
+window.onload = init;

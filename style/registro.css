@@ -106,8 +106,9 @@ input[type=text], select {
   }
   
   li a {
+    font-size: x-large;
     display: block;
-    color: white;
+    color: rgb(153, 153, 153);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -115,11 +116,7 @@ input[type=text], select {
   
   /* Change the link color to #111 (black) on hover */
   li a:hover {
-    background-color: #111;
+    background-color: #a7a5a5;
   }
   
   
-  html { 
-    background:white no-repeat center fixed; 
-    background-size: cover;
-  }

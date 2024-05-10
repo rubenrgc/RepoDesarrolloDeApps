@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="./style/registro.css" type="text/css" /> 
+
+
+
+    <Header>
+
+       
+    <div class="barra-menu">
+        
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="articles.html">Articles</a></li>
+                <li><a href="contacto.html">Contact</a></li>
+                <li><a href="facultades.html">Registrar Facultades</a></li>
+            </ul>
+
+        </nav>
+
+    </div>
+        
+    </Header>
+<main >
+    
+
+
+<div class="form" >
+    <h2>Registra una facultad nueva para que se integre al catalogo de selecciones:</h2>
+    <form  id="form2">
+    
+    <div>
+        <label  for="txtFacultad">Facultad:</label>
+        <input type="text" id="txtFacultad">
+    </div>
+
+    <div>
+        <label for="txtCampus" >Campus:</label>
+        <input type="text" id="txtCampus">
+    </div>
+
+
+<div>
+    <h2>Da clic  en "Registrar" para enviar los registros en el formulario no debe quedar ningun campo sin llenar:</h2>
+</div>
+
+<div>
+    <button class="button" onclick="registerFacultades()">Registrar nueva Facultad</button>
+</div>
+    
+</div>
+
+</form>
+
+</main>
+
+</div>
+<script src="./scripts/facultades.js"></script>
+<script  src="./scripts/storeManager.js"></script>
+</body>
+</html>
