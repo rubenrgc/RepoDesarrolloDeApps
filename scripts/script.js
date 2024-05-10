@@ -30,7 +30,7 @@ students.splice(1,1);//quita item especifivco
 console.log(students);
 
 
-let student1 = {
+let student6 = {
 name:"samantha",
 age:99,
 isStudent:false

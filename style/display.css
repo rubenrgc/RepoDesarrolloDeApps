@@ -1,7 +1,7 @@
 #studentList{
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
-column-gap: 100px;
+column-gap: 10px;
 row-gap: 10px;
 margin: 20px 0;
 
@@ -14,4 +14,9 @@ margin: 20px 0;
     border: 1px solid rgb(172, 165, 165);
     border-radius: 10px;
     padding: 10px;
+    }
+
+    h3{
+
+        margin: 20px 0;
     }
