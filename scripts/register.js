@@ -82,6 +82,8 @@ function registrar() {
 }
 
 function initStudents() {
+  let facul1 = new Facultades("FCAyS", "Mexicali Baja California");
+  facultadesarray.push(facul1); // lo pusha alo areglo
 
   let student1 = new Student(
     "Samuel",

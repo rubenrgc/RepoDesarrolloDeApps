@@ -92,19 +92,3 @@ try {
 } catch (error) {
   console.log(error);
 }
-
-function initFacultades() {
-  let facul1 = new Facultades("FCAyS", "Mexicali Baja California");
-  facultadesarray.push(facul1); // lo pusha alo areglo
-
-
-try {
-  displayCards();
-} catch (error) {
-  
-}
- 
-}
-// //espera renderizar el html
-
-window.onload = initFacultades;
