@@ -107,15 +107,14 @@ if (isValid(nuevoAlumno) == true) {
 
 
 
-
-
 function init() {
-
+ 
   let student1 = new Student("Samuel",99,"Hombre","samurl@hotmail.com",1234567,"Matematicas","Historia","Quimica","Cuencias Sociales");
   students.push(student1);
   
+  displayCards();
 
- var fac  =  JSON.parse(localStorage.getItem("facultades"));
+ var fac  =  JSON.parse(localStorage.getItem(facultades));
     var select = document.getElementById("facultad");
 
     console.log(document.getElementById("facultad"));
@@ -128,8 +127,6 @@ function init() {
       if (fac.hasOwnProperty(key)) {
         var facultadOption = document.createElement("option");
         console.log(facultadOption);
-
-        debugger
         facultadOption.value = key;
 
         console.log(key);
@@ -147,17 +144,11 @@ function init() {
 
 
 
-  displayCards();
+
 
   
 }
 // //espera renderizar el html
-
-
-
-
-
-
 
 
 

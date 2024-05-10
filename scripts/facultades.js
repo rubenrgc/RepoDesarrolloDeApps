@@ -130,7 +130,7 @@ function init() {
   let facul1 = new Facultades("FCAyS", "Mexicali Baja California");
   facultadesarray.push(facul1); // lo pusha alo areglo
 
-  //displayCards();
+  displayCards();
 
   
 }

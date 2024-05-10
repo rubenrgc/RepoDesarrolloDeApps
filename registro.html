@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="./style/registro.css" type="text/css" /> 
 
 
@@ -75,52 +76,47 @@
 
 
 </form>
+
 <h2>Selecciona una facultad:</h2>
+
 <form>
   <div>
-
     <label for="facultad">Facultad:</label>
     <select id="facultad" >
       <!-- Aquí se agregarán las opciones -->
-      
     </select>
-
   </div>
-  
   <h2>Da clic  en "Registrar" para enviar los registros en el formulario no debe quedar ningun campo sin llenar:</h2>
   <div class="button">
-  
       <button  onclick="registrar()">Registrar</button>
   </div>
      
 </form>
-  
-        <!--  <option value="">--Please choose an option--</option>
-        <option value="ciencias administrativas">Ciencias Administrativas</option>
-        <option value="ingenieria">Ingenieria</option>
-        <option value="ciencias politicas">Ciencias Politicas</option>
-    --> 
-   
-
-
-   
-
 
 </div>
-<div>
-
-<h3>Estudiantes registrados</h3>
-<div id="studentList">Lista</div>
 
 
-</div>
+
 </main>
 
+<div>
+    <form>
 
 
+ 
 
+    <div >Lista</div>
+    
+    <h3>Estudiantes registrados</h3>
+    <table id="studentList">
 
+    </form>
+   
 </div>
+
+
+
+
 <script src="./scripts/register.js"></script>
 <script src="./scripts/display.js"> </script>
 <script src="./scripts/facultades.js"> </script>
