@@ -56,7 +56,7 @@ function registrar() {
   let inputMateria1 = document.getElementById("txtMateria1").value;
   let inputMateria2 = document.getElementById("txtMateria2").value;
   let inputMateria3 = document.getElementById("txtMateria3").value;
-  let inpuFacultad = document.getElementById("facultad").value;
+ // let inpuFacultad = document.getElementById("facultad").value;
 
   let nuevoAlumno = new Student(
     inputNombre,
@@ -67,13 +67,13 @@ function registrar() {
     inputMateria1,
     inputMateria2,
     inputMateria3,
-    inpuFacultad
+   // inpuFacultad
   );
-
   if (isValid(nuevoAlumno) == true) {
     students.push(nuevoAlumno);
     console.log(students);
     displayCards();
+   
   } else {
     alert("Por favor completa los campos");
   }
@@ -81,10 +81,8 @@ function registrar() {
   //form.reset();
 }
 
-function initStudents() {
-  let facul1 = new Facultades("FCAyS", "Mexicali Baja California");
-  facultadesarray.push(facul1); // lo pusha alo areglo
 
+function initStudents() {
   let student1 = new Student(
     "Samuel",
     99,
@@ -99,34 +97,8 @@ function initStudents() {
   students.push(student1);
 
   console.log(student1);
-  
+
   displayCards();
-  
-  var fac = JSON.parse(localStorage.getItem(facultades));
-  var select = document.getElementById("facultad");
-
-  console.log(document.getElementById("facultad"));
-  console.log(select);
-  select.innerHTML = ""; // Limpiar las opciones actuales
-
-  for (var key in fac) {
-    // repite para recorrer los elementos del objeto
-    console.log(key);
-    if (fac.hasOwnProperty(key)) {
-      var facultadOption = document.createElement("option");
-      console.log(facultadOption);
-      facultadOption.value = key;
-
-      console.log(key);
-      facultadOption.innerHTML = fac.namefacultad + "-" + fac.namecampus;
-      console.log(facultadOption);
-      select.appendChild(facultadOption);
-      console.log(select);
-
-      //QUEDARSE EN EL MENU DEL OPTION grabado
-    }
-  }
+ 
 }
-// //espera renderizar el html
-
 window.onload = initStudents;
