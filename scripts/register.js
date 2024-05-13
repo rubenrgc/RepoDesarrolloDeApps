@@ -56,7 +56,7 @@ function registrar() {
   let inputMateria1 = document.getElementById("txtMateria1").value;
   let inputMateria2 = document.getElementById("txtMateria2").value;
   let inputMateria3 = document.getElementById("txtMateria3").value;
- // let inpuFacultad = document.getElementById("facultad").value;
+  let inpuFacultad = document.getElementById("facultad").value;
 
   let nuevoAlumno = new Student(
     inputNombre,
@@ -67,7 +67,7 @@ function registrar() {
     inputMateria1,
     inputMateria2,
     inputMateria3,
-   // inpuFacultad
+   inpuFacultad
   );
   if (isValid(nuevoAlumno) == true) {
     students.push(nuevoAlumno);
@@ -80,6 +80,7 @@ function registrar() {
 
   //form.reset();
 }
+
 
 
 function initStudents() {
@@ -100,5 +101,6 @@ function initStudents() {
 
   displayCards();
  
+
 }
 window.onload = initStudents;

@@ -3,10 +3,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="./style/registro.css" type="text/css" /> 
-<link rel="stylesheet" href="./style/tabla.css" type="text/css" /> 
+
 
 <link rel="stylesheet" href="./style/display.css" type="text/css" /> 
-    <Header>
+    <header>
 
        
     <div class="barra-menu">
@@ -24,7 +24,7 @@
 
     </div>
         
-    </Header>
+    </header>
 <main class="container">
     
 
@@ -33,31 +33,32 @@
     <h2>Registra un alumno nuevo:</h2>
     <form  id="form">
    
-        <div>
+    <div>
         <label  for="txtNombre">Nombre:</label>
         <input type="text" id="txtNombre">
    
-        </div>
+    </div>
   
-        <div>
+    <div>
         <label for="txtEdad" >Edad:</label>
         <input type="number" id="txtEdad">
     </div>
   
-        <div>
+    <div>
         <label  for="txtGender" >Genero:</label>
         <input type="text" id="txtGender">
     </div>
 
-        <div>
+    <div>
         <label  for="txtEmail">Email:</label>
         <input type="email" id="txtEmail">
     </div>
 
-        <div>
+    <div>
         <label for="txtPassword" >Password:</label>
         <input type="password" id="txtPassword">
     </div>
+
     <h2>Registra sus calificaciones:</h2>
    
     <div>
@@ -65,56 +66,56 @@
         <input type="text" id="txtMateria1">
     </div>
 
-        <div>
+    <div>
         <label for="txtMateria2">Materia 2:</label>
         <input type="text" id="txtMateria2">
     </div>
 
-        <div>
+    <div>
         <label for="txtMateria3">Materia 3:</label>
         <input type="text" id="txtMateria3">
     </div>
 
-</form>
+<div>
 
-  <h2>Da clic  en "Registrar" para enviar los registros en el formulario no debe quedar ningun campo sin llenar:</h2>
-  <div class="button">
-      <button  onclick="registrar()">Registrar</button>
-  </div>
-     
+
+</div>
+    
+
+<label for="facultad">Facultad:</label>
+<select id="facultad">
+<option value="FCQI">FCQI</option>
+<option value="FCA">FCA</option>
+<option value="FCITEC">FCITEC</option>
+<option value="FIA">FIA</option>   
+</select>
+
+    </form>
+    <h2>Da clic  en "Registrar" para enviar los registros en el formulario no debe quedar ningun campo sin llenar:</h2>
+     <div>
+       
+        <button  class="button" onclick="registrar()">Registrar</button>
+   
+    </div>
 
 </div>
 
+<div>
+      
+          
+</div>
+
+
 
 <h3>Estudiantes registrados</h3>
-<div   id="studentList"></div>
-<h2>Tabla generada con JavaScript</h2>
+<div id="studentList">xxx</div>
 
-<table id="miTabla">
-    <thead>
-        <tr>
-            <th>Nombre</th>
-            <th>Edad</th>
-            <th>Genero</th>
-            <th>Email</th>
-            <th>Password</th>
-            <th>Materia 1</th>
-            <th>Materia 2</th>
-            <th>Materia 3</th>
-            <th>Facultad</th>
-        </tr>
-    </thead>
-    <tbody id="cuerpoTabla">
-        <!-- Aquí se generará el contenido de la tabla -->
-    </tbody>
-</table>
+</div>
 </main>
-
-
 <script src="./scripts/register.js"></script>
 <script src="./scripts/display.js"> </script>
 <script src="./scripts/facultades.js"> </script>
-
-  
 </body>
 </html>
+
+
