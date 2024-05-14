@@ -1,22 +1,31 @@
-#studentList{
-display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-column-gap: 10px;
-row-gap: 10px;
-margin: 20px 0;
 
-
-
+    /* Estilo básico para la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
-.student{
- 
-    border: 1px solid rgb(172, 165, 165);
-    border-radius: 10px;
-    padding: 10px;
-    }
+th, td {
+    border: 1px solid #ddd; /* Cambia el color del borde si lo deseas */
+    padding: 8px;
+    text-align: left;
+}
 
-    h3{
+th {
+    background-color: #f2f2f2; /* Color de fondo para las celdas del encabezado */
+}
 
-        margin: 20px 0;
-    }
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Color de fondo para las filas pares */
+}
+
+tr:hover {
+    background-color: #ddd; /* Cambia el color de fondo al pasar el mouse sobre una fila */
+}
+
+
+
+
+button:hover {
+    background-color: #d32f2f; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+}

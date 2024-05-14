@@ -72,18 +72,19 @@ function registrar() {
   if (isValid(nuevoAlumno) == true) {
     students.push(nuevoAlumno);
     console.log(students);
-    displayCards();
-   
+   // displayCards();
+    displayTable();
+    form.reset();
   } else {
     alert("Por favor completa los campos");
   }
 
-  //form.reset();
 }
 
 
 
 function initStudents() {
+
   let student1 = new Student(
     "Samuel",
     99,
@@ -95,12 +96,15 @@ function initStudents() {
     "Quimica",
     "Cuencias Sociales"
   );
-  students.push(student1);
 
+
+  students.push(student1);
+  students.push(student2);
   console.log(student1);
 
-  displayCards();
- 
+  //displayCards();
+
+  displayTable();
 
 }
 window.onload = initStudents;

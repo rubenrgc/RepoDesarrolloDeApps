@@ -48,14 +48,13 @@ function registerFacultades() {
   function saveItems(facultadesarray) {
     //console.log( item);// item es objeto que se imprime en consola
    
-    debugger
- 
+    
     localStorage.setItem("facultades",JSON.stringify(facultadesarray)); //se guarda como cadena en local storage
   
-    console.log(localStorage.getItem("facultades"));
+    console.log(localStorage.getItem("facultades"));//lo imprime la key
 
 
-    fac = JSON.parse(localStorage.getItem("facultades"));
+    let fac = JSON.parse(localStorage.getItem("facultades")); //lo convierte a un Object
 
 
     console.log(fac );
@@ -65,79 +64,13 @@ function registerFacultades() {
   }
 
 
-  //aqui ya esta guardada la cadena en el store con el key facultades
-  //convertir cadena val en un objeto para despues desplegarlo en la lista function getNameCampusLocalStorage() {
-
   //form.reset();
 
-
-
-  try {
-    alimentasalectfacultad();
-    function alimentasalectfacultad() {
-       fac = JSON.parse(localStorage.getItem("facultades"));
-  
-      console.log(facultadesarray);
-      var select = document.createElement("select");
-      select =JSON.parse( document.getElementById("facultad"));
-      console.log(select);
-      console.log(document.getElementById("facultad"));
-      console.log(select);
-      //select.innerHTML = ""; // Limpiar las opciones actuales
-  
-      for (var key in facultadesarray) {
-        // repite para recorrer los elementos del objeto
-        console.log(facultadesarray);
-        console.log(key);
-        if (facultadesarray.hasOwnProperty(key)) {
-          var facultadOption = document.createElement("option");
-          console.log(facultadOption);
-  
-  
-          facultadOption.value = facultadesarray[key].id;
-          
-          
-          
-          
-         
-          console.log(facultadesarray);
-          facultadOption.innerHTML = facultadesarray[key].namefacultad + "-" + facultadesarray[key].namecampus;
-          console.log(facultadOption);
-         
-          select.appendChild(facultadOption);
-          console.log(select);
-  
-  
-        }
-      }
-    }
-  } catch (error) {
-    console.log(error);
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+  
+  
+
 
