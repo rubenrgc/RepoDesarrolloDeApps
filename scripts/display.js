@@ -42,22 +42,10 @@ let tableContent =
       </thead>
       <tbody>`;
 
-  
-
-
-
-
-
-
-
-
-
 for (let i = 0; i < students.length; i++) {
 
 let student = students[i];
     tableContent += 
-
-
 
 `<tr>
       <td>${student.name}</td> 
@@ -77,9 +65,6 @@ let student = students[i];
 
 tableContent += 
 
-
-
-   
 "</tbody></table>";
 document.getElementById("studentList").innerHTML = tableContent;
 }

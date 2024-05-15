@@ -27,6 +27,8 @@ function Student(
   
     
 function isValid(unaAlumno) {
+
+  //declaracion de variable validacion que se usa en el objeto Student
   let validacion = true;
 
   if (unaAlumno.name == "") {
@@ -61,6 +63,8 @@ function isValid(unaAlumno) {
   if (unaAlumno.facultad == "") {
     validacion = false;
   }
+
+  // retorna nuevo estado de la variable validacion
   return validacion;
 }
   
@@ -69,7 +73,7 @@ function isValid(unaAlumno) {
   
   
 
-//registrar
+//registrar lo utiliza el boton de registrar en el formulario HTML alumno
 
 // agarra los valores de lols campos y los guarda en variables
 function registrar() {
@@ -83,6 +87,8 @@ function registrar() {
   let inputMateria3 = document.getElementById("txtMateria3").value;
   let inpuFacultad = document.getElementById("facultad").value;
 
+
+  //pasa el contenido de las variables al arreglo aqui mismo declarado
   let nuevoAlumno = new Student(
     inputNombre,
     inputEdad,
@@ -96,17 +102,13 @@ function registrar() {
   );
 
 
-
-
-
-
-  if (isValid(nuevoAlumno)) {
+  if (isValid(nuevoAlumno)) {//valida si la variable validacion es verdadera y si no envia un error
     debugger;
 
-    students.push(nuevoAlumno);
-
-    // displayCards();
-    displayTable();
+    students.push(nuevoAlumno);//empuja los datos que contiene el arreglo al arreglo
+    saveItems(nuevoAlumno);//usa la funcion que se encuentra en storeManager.js para decodificar los datos
+    displayCards();//usa la funcion anterior para desplegar las cards
+    displayTable();//usa la funcion anterior para desplegar las tablas
     form.reset();
   } else {
     alert("Por favor completa alguno de los campos");
@@ -116,8 +118,8 @@ function registrar() {
   
 }
 
-function initStudents() {
-  let student1 = new Student(
+function init() {//usa la fucncion para inicializar lo que se necesite en la pagina antes de empezar a funcionar
+  let student1 = new Student(//inserta un alumno en el arreglo
     "Samuel",
     99,
     "Hombre",
@@ -129,12 +131,12 @@ function initStudents() {
     "Cuencias Sociales"
   );
 
-  students.push(student1);
+  students.push(student1);//empuja el student1 a el arreglo
 
-  console.log(student1);
+  console.log(student1);//imprime lo que contiene student1
 
-  //displayCards();
+  displayCards();
 
   displayTable();
 }
-window.onload = initStudents;
+window.onload = init;// espera a que cargue html 

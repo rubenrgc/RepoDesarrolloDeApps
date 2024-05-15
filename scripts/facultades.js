@@ -15,7 +15,7 @@ function isValidfacs(unaFacultad) {
     validacion = false;
   }
 
-  if (unaFacultad.campnamecampusus == "") {
+  if (unaFacultad.namecampus == "") {
     validacion = false;
   }
 
@@ -25,46 +25,24 @@ function isValidfacs(unaFacultad) {
 //registrer
 
 function registerFacultades() {
+
   //toma los valores de los campos y los guarda en las variables
   let inputName = document.getElementById("txtFacultad").value;
   let inputCampus = document.getElementById("txtCampus").value;
 
   //objeto nuevo que almavena los valores en la variable nuevaFacultad
   let nuevaFacultad = new Facultades(inputName, inputCampus);
-  if (isValid(nuevaFacultad) ) {
-    facultadesarray.push(nuevaFacultad); // lo guarda en el arreglo las variables inputname inputcampus
 
-    console.log(facultadesarray);
 
-    console.log(nuevaFacultad);
-
-    //  displayCards();//podria ser el que tengo que crear
-    // form.reset();
+  if (isValidfacs(nuevaFacultad) ) {
+     facultadesarray.push(nuevaFacultad); 
+     saveItems(nuevaFacultad);
+     displayCards();
+     displayTable();
+     form.reset();
   } else {
     alert("Error");
   }
-  saveItems(facultadesarray); // esta funcion esta en el store manager
-  //trae los items
-  function saveItems(facultadesarray) {
-    //console.log( item);// item es objeto que se imprime en consola
-   
-    
-    localStorage.setItem("facultades",JSON.stringify(facultadesarray)); //se guarda como cadena en local storage
-  
-    console.log(localStorage.getItem("facultades"));//lo imprime la key
-
-
-    let fac = JSON.parse(localStorage.getItem("facultades")); //lo convierte a un Object
-
-
-    console.log(fac );
-
-
-
-  }
-
-
-  //form.reset();
 
 }
 
