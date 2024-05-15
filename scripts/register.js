@@ -24,26 +24,51 @@ function Student(
 }
 
 //validacion
-
-function isValid(unAlumno) {
+  
+    
+function isValid(unaAlumno) {
   let validacion = true;
 
-  if (unAlumno.name == "") {
+  if (unaAlumno.name == "") {
     validacion = false;
   }
 
-  if (unAlumno.age == "") {
+  if (unaAlumno.age == "") {
     validacion = false;
   }
-  if (unAlumno.gender == "") {
-    validacion = false;
-  }
-  if (unAlumno.password == "") {
+  if (unaAlumno.gender == "") {
     validacion = false;
   }
 
+  if (unaAlumno.email == "") {
+    validacion = false;
+  }
+  if (unaAlumno.password == "") {
+    validacion = false;
+  }
+
+  if (unaAlumno.materia1 == "") {
+    validacion = false;
+  }
+  if (unaAlumno.materia2 == "") {
+    validacion = false;
+  }
+
+  if (unaAlumno.materia3 == "") {
+    validacion = false;
+  }
+
+  if (unaAlumno.facultad == "") {
+    validacion = false;
+  }
   return validacion;
 }
+  
+
+  
+  
+  
+
 //registrar
 
 // agarra los valores de lols campos y los guarda en variables
@@ -67,24 +92,31 @@ function registrar() {
     inputMateria1,
     inputMateria2,
     inputMateria3,
-   inpuFacultad
+    inpuFacultad
   );
-  if (isValid(nuevoAlumno) == true) {
+
+
+
+
+
+
+  if (isValid(nuevoAlumno)) {
+    debugger;
+
     students.push(nuevoAlumno);
-    console.log(students);
-   // displayCards();
+
+    // displayCards();
     displayTable();
     form.reset();
   } else {
-    alert("Por favor completa los campos");
+    alert("Por favor completa alguno de los campos");
   }
 
+
+  
 }
 
-
-
 function initStudents() {
-
   let student1 = new Student(
     "Samuel",
     99,
@@ -97,14 +129,12 @@ function initStudents() {
     "Cuencias Sociales"
   );
 
-
   students.push(student1);
-  students.push(student2);
+
   console.log(student1);
 
   //displayCards();
 
   displayTable();
-
 }
 window.onload = initStudents;

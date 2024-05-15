@@ -8,14 +8,14 @@ function Facultades(namefacultad, namecampus) {
 
 //validacioon
 
-function isValid(unaFacultad) {
+function isValidfacs(unaFacultad) {
   let validacion = true;
 
-  if (unaFacultad.name == "") {
+  if (unaFacultad.namefacultad == "") {
     validacion = false;
   }
 
-  if (unaFacultad.campus == "") {
+  if (unaFacultad.campnamecampusus == "") {
     validacion = false;
   }
 
@@ -31,7 +31,7 @@ function registerFacultades() {
 
   //objeto nuevo que almavena los valores en la variable nuevaFacultad
   let nuevaFacultad = new Facultades(inputName, inputCampus);
-  if (isValid(nuevaFacultad) == true) {
+  if (isValid(nuevaFacultad) ) {
     facultadesarray.push(nuevaFacultad); // lo guarda en el arreglo las variables inputname inputcampus
 
     console.log(facultadesarray);
