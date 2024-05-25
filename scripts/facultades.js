@@ -35,10 +35,13 @@ function registerFacultades() {
 
 
   if (isValidfacs(nuevaFacultad) ) {
+
+
+
      facultadesarray.push(nuevaFacultad); 
      saveItems(nuevaFacultad);
-     displayCards();
-     displayTable();
+     //displayCards();
+    // displayTable();
      form.reset();
   } else {
     alert("Error");
@@ -50,5 +53,3 @@ function registerFacultades() {
 
   
   
-
-

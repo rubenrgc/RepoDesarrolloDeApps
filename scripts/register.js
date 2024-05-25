@@ -24,10 +24,8 @@ function Student(
 }
 
 //validacion
-  
-    
-function isValid(unaAlumno) {
 
+function isValid(unaAlumno) {
   //declaracion de variable validacion que se usa en el objeto Student
   let validacion = true;
 
@@ -67,11 +65,6 @@ function isValid(unaAlumno) {
   // retorna nuevo estado de la variable validacion
   return validacion;
 }
-  
-
-  
-  
-  
 
 //registrar lo utiliza el boton de registrar en el formulario HTML alumno
 
@@ -87,7 +80,6 @@ function registrar() {
   let inputMateria3 = document.getElementById("txtMateria3").value;
   let inpuFacultad = document.getElementById("facultad").value;
 
-
   //pasa el contenido de las variables al arreglo aqui mismo declarado
   let nuevoAlumno = new Student(
     inputNombre,
@@ -101,42 +93,84 @@ function registrar() {
     inpuFacultad
   );
 
+  if (isValid(nuevoAlumno)) {
+    //valida si la variable validacion es verdadera y si no envia un error
 
-  if (isValid(nuevoAlumno)) {//valida si la variable validacion es verdadera y si no envia un error
-    debugger;
+    insertToDataBase(nuevoAlumno);
+    console.log(nuevoAlumno);
 
-    students.push(nuevoAlumno);//empuja los datos que contiene el arreglo al arreglo
-    saveItems(nuevoAlumno);//usa la funcion que se encuentra en storeManager.js para decodificar los datos
-    displayCards();//usa la funcion anterior para desplegar las cards
-    displayTable();//usa la funcion anterior para desplegar las tablas
+    //students.push(nuevoAlumno);//empuja los datos que contiene el arreglo al arreglo
+    saveItems(nuevoAlumno); //usa la funcion que se encuentra en storeManager.js para decodificar los datos
+    //displayCards();//usa la funcion anterior para desplegar las cards
+    // displayTable();//usa la funcion anterior para desplegar las tablas
     form.reset();
   } else {
     alert("Por favor completa alguno de los campos");
   }
-
-
-  
 }
 
-function init() {//usa la fucncion para inicializar lo que se necesite en la pagina antes de empezar a funcionar
-  let student1 = new Student(//inserta un alumno en el arreglo
-    "Samuel",
-    99,
-    "Hombre",
-    "samurl@hotmail.com",
-    1234567,
-    "Matematicas",
-    "Historia",
-    "Quimica",
-    "Cuencias Sociales"
-  );
+function insertToDataBase(newStudent) {
 
-  students.push(student1);//empuja el student1 a el arreglo
 
-  console.log(student1);//imprime lo que contiene student1
+  $.ajax({
+    url:  "./app/register.php",
+    method: "POST",
+    data: {
+      name: newStudent.name,
+      age: newStudent.age,
+      gender: newStudent.gender,
+      email: newStudent.email,
+      password: newStudent.password,
+      materia1: newStudent.materia1,
+      materia2: newStudent.materia2,
+      materia3: newStudent.materia3,
+      facultad: newStudent.facultad
+    },
+    dataType: 'JSON',
 
-  displayCards();
-
-  displayTable();
+   
+    success: function (response) {
+      debugger
+    
+      if (response.success) {
+        
+        console.log(response);
+        setTimeout(function () {
+          location.reload();
+        }, 1000);
+      } else {
+        console.log("Error, Por favor intente de nuevo");
+      }
+    },
+    error: function (xhr, status, error) {
+      debugger
+   
+      console.log(error);
+      console.log(status);
+      console.log(xhr);
+    }
+  });
 }
-window.onload = init;// espera a que cargue html 
+
+// function init() {//usa la fucncion para inicializar lo que se necesite en la pagina antes de empezar a funcionar
+//   let student1 = new Student(//inserta un alumno en el arreglo
+//     "Samuel",
+//     99,
+//     "Hombre",
+//     "samurl@hotmail.com",
+//     1234567,
+//     "Matematicas",
+//     "Historia",
+//     "Quimica",
+//     "Cuencias Sociales"
+//   );
+
+//   students.push(student1);//empuja el student1 a el arreglo
+
+//   console.log(student1);//imprime lo que contiene student1
+
+//   displayCards();
+
+//   displayTable();
+// }
+// window.onload = init;// espera a que cargue html
