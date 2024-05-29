@@ -1,0 +1,109 @@
+
+html {
+  min-height: 100%;
+  position: relative;
+
+}
+
+body{
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgb(255, 255, 255);
+  color: rgb(73, 70, 70);
+}
+p{
+
+    line-height-step:  2;
+    text-align: center;
+    position: unset;
+    }
+
+h1, h2{
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+    text-align: center;
+    font-size:50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+a{
+  
+
+text-decoration: center;
+color: gray;
+
+}
+
+img.estudiante{
+    display: block;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+
+
+}
+.container{
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.boton{
+
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+button{
+ 
+  background-color: #0000ff;
+  align-items: center;
+  border: bisque;
+  color: white;
+  border-radius: 25px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: auto;
+  margin-right: center;
+  margin-left: center;
+  cursor: pointer;
+  box-shadow: 3px 3px .5px 1px rgb(173, 173, 173);
+
+}
+
+
+
+ /* Nav Barr*/ 
+ ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  font-size: x-large;
+  display: block;
+  color: rgb(206, 202, 202);
+
+  
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #252525;
+}
+

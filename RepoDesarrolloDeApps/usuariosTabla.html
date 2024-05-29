@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> -->
+    <!-- <meta charset="UTF-8"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./styles/usuariosTable.css" type="text/css" /> 
+
+<link rel="stylesheet" href="./styles/base.css" />
+<script src="./scripts/display.js"></script>
+<script  src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script  src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+<script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <header>
+
+       
+    <div class="barra-menu">
+        
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="facultades.html">Registrar Facultades</a></li>
+          <li><a href="registro.html">Registrar Estudiantes</a></li>
+          <li><a href="usuarios.html">Usuarios Cards</a></li>
+          <li><a href="usuariosTabla.html">Usuarios Tabla</a></li>
+        </ul>
+      </nav>
+
+    </div>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+          var datatable = $("#studentTable").DataTable({
+     
+            ajax: "./app/get_students.php",
+            columns: [{ data: "id" }, { data: "name" }, { data: "age" }, { data: "gender" }, { data: "email" }, { data: "password" }, { data: "materia1" }, { data: "materia2" }, { data: "materia3" }, { data: "facultad" }],
+          });
+        });
+  </script>
+       
+</header>
+
+<body>
+<main class="container">
+
+
+
+    
+<h2>Tabla Estudiantes Registrados </h2>
+    <table id="studentTable" class="display" cellspacing="0" width="100%">
+     
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Materia1</th>
+            <th>Materia2</th>
+            <th>Materia3</th>
+            <th>Facultad</th>
+          </tr>
+        </thead>
+       
+    
+      </table>
+    </main>
+</div>
+</main>
+
+</body>
+</html>
+
+

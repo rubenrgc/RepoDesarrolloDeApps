@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- <html lang="en"> 
+   <meta charset="UTF-8" /> -->
+  <link rel="stylesheet" href="./styles/registro.css" type="text/css" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <header>
+    <div class="barra-menu">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="facultades.html">Registrar Facultades</a></li>
+          <li><a href="registro.html">Registrar Estudiantes</a></li>
+          <li><a href="usuarios.html">Usuarios Cards</a></li>
+          <li><a href="usuariosTabla.html">Usuarios Tabla</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <body>
+    <main>
+      <div class="form">
+        <form id="form">
+          <h2>
+            Registra una facultad nueva para que se integre al catalogo de
+            selecciones:
+          </h2>
+          <div>
+            <label for="txtFacultad">Facultad:</label>
+            <input type="text" id="txtFacultad" />
+          </div>
+
+          <div>
+            <label for="txtCampus">Campus:</label>
+            <input type="text" id="txtCampus" />
+          </div>
+
+          <div>
+            <h2>
+              Da clic en "Registrar" para enviar los registros en el formulario
+              no debe quedar ningun campo sin llenar:
+            </h2>
+
+            <button class="button" onclick="registerFacultades()">
+              Registrar nueva Facultad
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="./scripts/facultades.js"></script>
+    <script src="./scripts/storeManager.js"></script>
+  </body>
+</html>
